@@ -1,3 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-  new WOW().init();
+  if (window.innerWidth > 600) {
+    new WOW().init();
+  }
 });
