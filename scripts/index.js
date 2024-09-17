@@ -11,16 +11,16 @@ const initIPLocation = () => {
         const countryCode = data.country_code;
         const currentPath = window.location.pathname;
 
-        if (countryCode === 'FR' && currentPath !== '/fr.html') {
-          window.location.href = '/fr.html';
-        } else if (countryCode !== 'FR' && currentPath !== '/index.html') {
-          window.location.href = '/index.html';
+        if (countryCode === 'FR' && currentPath !== './fr.html') {
+          window.location.href = './fr.html';
+        } else if (countryCode !== 'FR' && currentPath !== './index.html') {
+          window.location.href = './index.html';
         }
       })
       .catch(error => {
         console.error('Error getting IP location:', error);
-        if (window.location.pathname !== '/index.html') {
-          window.location.href = '/index.html';
+        if (window.location.pathname !== './index.html') {
+          window.location.href = './index.html';
         }
       });
   } else {
